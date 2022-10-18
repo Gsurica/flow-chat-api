@@ -1,4 +1,4 @@
 export type CreateMessageDTO = {
-  userId: string;
+  username: string;
   message: string;
 };

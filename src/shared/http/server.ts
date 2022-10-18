@@ -4,8 +4,27 @@ import 'express-async-errors';
 import cors from 'cors';
 import { routes } from './routes';
 import { AppError } from '@shared/errors/AppError';
+import http from 'http';
+// import socket from 'socket.io';
 
 const app = express();
+const server = http.createServer(app);
+
+// const io = socket(server, {
+//   path: '/socket.io',
+// });
+
+// const clients = [];
+
+// io.on('connection', client => {
+//   console.log(`Client connected ${client.id}`);
+//   clients.push(client);
+
+//   client.on('disconnect', () => {
+//     clients.splice(clients.indexOf(client), 1);
+//     console.log('Client disconnected!');
+//   });
+// });
 
 app.use(cors());
 app.use(express.json());
