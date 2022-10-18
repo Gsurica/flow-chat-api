@@ -11,6 +11,6 @@ const getUserController = new GetUserController();
 
 userRoutes.post('/create', createController.handle);
 userRoutes.post('/login', loginController.handle);
-userRoutes.get('/:id', getUserController.handle);
+userRoutes.get('/:username', getUserController.handle);
 
 export { userRoutes };
